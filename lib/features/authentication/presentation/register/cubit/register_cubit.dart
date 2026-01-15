@@ -31,7 +31,7 @@ class RegisterCubit extends Cubit<RegisterState> {
         password: state.password,
       );
       emit(state.copyWith(status: RegisterStatus.success));
-    } catch (e) {
+    } on Exception catch (e) {
       emit(
         state.copyWith(
           status: RegisterStatus.failure,

@@ -19,7 +19,6 @@ class AuthCubit extends Cubit<AuthState> {
   }
 
   final AuthRepository _authRepository;
-  // ignore: cancel_subscriptions
   late final StreamSubscription<User> _authSubscription;
 
   Future<void> logOut() => _authRepository.logOut();
