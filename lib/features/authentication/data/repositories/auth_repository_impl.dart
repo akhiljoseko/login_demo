@@ -20,10 +20,11 @@ class AuthRepositoryImpl implements AuthRepository {
 
   @override
   Future<void> logIn({required String email, required String password}) async {
-    // TODO: implement logIn
-    await Future.delayed(const Duration(milliseconds: 300), () {
-      _controller.add(const User(id: 'mock_id', email: 'test@example.com'));
-    });
+    await Future<void>.delayed(const Duration(seconds: 1));
+    // Simulate successful login with a mock user
+    _controller.add(
+      User(id: 'mock_user_id', email: email, name: 'Mock User'),
+    );
   }
 
   @override
@@ -33,8 +34,12 @@ class AuthRepositoryImpl implements AuthRepository {
   }
 
   @override
-  Future<void> signUp({required String email, required String password}) async {
+  Future<void> signUp({
+    required String email,
+    required String password,
+    required String name,
+  }) async {
     // TODO: implement signUp
-    await Future.delayed(const Duration(milliseconds: 300));
+    await Future<void>.delayed(const Duration(milliseconds: 300));
   }
 }

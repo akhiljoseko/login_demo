@@ -1,15 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:login_demo/features/authentication/presentation/pages/auth_screen.dart';
+import 'package:login_demo/features/authentication/presentation/login/view/login_page.dart';
 
 part 'app_router.g.dart';
 
 final router = GoRouter(routes: $appRoutes, initialLocation: '/');
 
-@TypedGoRoute<AuthRoute>(path: '/')
-class AuthRoute extends GoRouteData with $AuthRoute {
-  const AuthRoute();
+@TypedGoRoute<LoginRoute>(path: '/')
+class LoginRoute extends GoRouteData with $LoginRoute {
+  const LoginRoute();
 
   @override
-  AuthScreen build(context, state) => const AuthScreen();
+  Widget build(BuildContext context, GoRouterState state) => const LoginPage();
+}
+
+@TypedGoRoute<RegisterRoute>(path: '/register')
+class RegisterRoute extends GoRouteData with $RegisterRoute {
+  const RegisterRoute();
+
+  @override
+  Widget build(BuildContext context, GoRouterState state) => const Scaffold(
+    body: Center(child: Text('Register Screen Placeholder')),
+  );
 }

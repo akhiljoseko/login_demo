@@ -9,15 +9,15 @@ environment:
 
 dependencies:
   bloc: ^9.2.0
-  flutter_bloc: ^9.1.1
+  equatable: ^2.0.8
   flutter:
     sdk: flutter
-  go_router: ^17.0.1
-  equatable: ^2.0.8
-  meta: ^1.17.0
+  flutter_bloc: ^9.1.1
   flutter_localizations:
     sdk: flutter
+  go_router: ^17.0.1
   intl: ^0.20.2
+  meta: ^1.17.0
   
 
 dev_dependencies:
