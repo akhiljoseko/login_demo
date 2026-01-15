@@ -35,11 +35,12 @@ class AuthRepositoryImpl implements AuthRepository {
 
   @override
   Future<void> signUp({
+    required String name,
     required String email,
     required String password,
-    required String name,
   }) async {
-    // TODO: implement signUp
-    await Future<void>.delayed(const Duration(milliseconds: 300));
+    await Future<void>.delayed(const Duration(seconds: 1));
+    // Simulate successful registration and login
+    _controller.add(User(id: 'mock_id_2', email: email, name: name));
   }
 }

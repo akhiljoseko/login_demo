@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:login_demo/features/authentication/presentation/login/view/login_page.dart';
+import 'package:login_demo/features/authentication/presentation/register/view/register_page.dart';
 
 part 'app_router.g.dart';
 
@@ -19,7 +20,6 @@ class RegisterRoute extends GoRouteData with $RegisterRoute {
   const RegisterRoute();
 
   @override
-  Widget build(BuildContext context, GoRouterState state) => const Scaffold(
-    body: Center(child: Text('Register Screen Placeholder')),
-  );
+  Widget build(BuildContext context, GoRouterState state) =>
+      const RegisterPage();
 }

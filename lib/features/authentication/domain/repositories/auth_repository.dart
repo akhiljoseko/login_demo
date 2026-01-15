@@ -12,9 +12,9 @@ abstract class AuthRepository {
   ///
   /// Throws a [SignUpFailure] if an exception occurs.
   Future<void> signUp({
+    required String name,
     required String email,
     required String password,
-    required String name,
   });
 
   /// Signs in with the provided [email] and [password].
